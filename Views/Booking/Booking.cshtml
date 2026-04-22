@@ -1,0 +1,71 @@
+@{
+    ViewData["Title"] = "Book Your Adventure";
+}
+
+<link rel="stylesheet" href="~/css/BookingStyle.css">
+
+<div class="booking-container">
+    <h1>Book Your Adventure✈️</h1>
+
+    <form method="post" action="/Booking/Booking" class="booking-form">
+        <div class="form-group">
+            <label>Guest Name</label>
+            <input type="text" name="GuestName" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="GuestEmail" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="PhoneNumber" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+            <label>Room Type</label>
+            <select name="RoomType" required>
+                <option value="">Select Room Type</option>
+                <option value="Standard Room">Standard Room</option>
+                <option value="Double Bed Room">Double Bed Room</option>
+                <option value="FirstClass">First Class</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Number of Rooms</label>
+            <input type="number" name="NumberOfRooms" min="1" value="1" required>
+        </div>
+
+        <div class="form-group">
+            <label>Check-in Date</label>
+            <input type="date" name="CheckInDate" required>
+        </div>
+
+        <div class="form-group">
+            <label>Check-out Date</label>
+            <input type="date" name="CheckOutDate" required>
+        </div>
+
+        <div class="form-group full">
+            <label>Special Requests</label>
+            <textarea name="SpecialRequests" placeholder="Any special request..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Price per Room</label>
+            <input type="text" value="₱2000" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Total Price</label>
+            <input type="number" name="TotalPrice" step="0.01" value="2000" required>
+        </div>
+
+        <button type="submit" class="book-btn">Confirm Booking</button>
+        <a href="/Home/Choices">
+            <button type="button" class="book-btn">Go Back</button>
+        </a>
+    </form>
+</div>

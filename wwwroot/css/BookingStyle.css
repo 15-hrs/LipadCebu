@@ -1,0 +1,101 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/BookingBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* CONTAINER */
+.booking-container{
+    color: white;
+    backdrop-filter: blur(10px);
+    padding:30px;
+    border-radius:12px;
+    width:90%;
+    max-width:900px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* FORM GRID */
+.booking-form{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:15px;
+}
+
+/* FORM GROUP */
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column: span 2;
+}
+
+label{
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+/* INPUTS */
+input, select, textarea{
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    outline:none;
+}
+
+textarea{
+    resize:none;
+    height:80px;
+}
+
+/* BUTTON */
+.book-btn{
+    grid-column: span 2;
+    padding:12px;
+    background:#002b5b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    background:#004080;
+}
+
+/* 📱 RESPONSIVE */
+@media(max-width:768px){
+    .booking-form{
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full{
+        grid-column: span 1;
+    }
+
+    .book-btn{
+        grid-column: span 1;
+    }
+}

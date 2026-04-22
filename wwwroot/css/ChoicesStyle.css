@@ -1,0 +1,166 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    position: relative;
+    background-image: url(../images/ChoicesBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #44ACFF;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navidiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    font-family: Helvetica Neue, sans-serif: Arial;
+}
+
+/* NAV LINKS */
+ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+ul, li, a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+ul, li, a:hover {
+    color: white;
+}
+
+/* SEARCH BAR */
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding: 8px 35px 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-container input:focus {
+    width: 250px;
+}
+
+.search-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ===== MAIN ===== */
+main {
+    padding: 40px;
+}
+
+/* ===== CARDS ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* OVERLAY TEXT */
+.intro {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    transition: 0.4s;
+}
+
+/* TITLE */
+.intro h2 {
+    font-size: 20px;
+}
+
+/* DESCRIPTION */
+.intro p {
+    font-size: 14px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* HOVER EFFECT */
+.card:hover .intro {
+    height: 160px;
+}
+
+.card:hover .intro p {
+    opacity: 1;
+}
+.book{
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff6b00;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.book:hover {
+    background-color: #e85f00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+.book:active {
+    transform: scale(0.96);
+}

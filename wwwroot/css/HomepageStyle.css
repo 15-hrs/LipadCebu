@@ -1,0 +1,119 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+body {
+    height: 100vh;
+    position: center;
+    background-image: url(../images/HomepageBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+/* Dark transparent overlay */
+body::before {
+    content: "";
+    position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* transparency */
+    z-index: 0;
+}
+
+.navbar {
+    background: #44ACFF;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.navidiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LOGO */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation list */
+ul {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* spacing between Home, About, Contact */
+}
+
+ul, li, a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+ul, li, a:hover {
+    color: #00c3ff;
+}
+p, h1{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* CENTERED MAIN BUTTON */
+.center-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Book Now button */
+.book-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff7a00;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #ff5500;
+}
+/*  text above the "book now" button */
+.center-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.quote {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    font-family: sans-serif;
+}
+
+.sub-quote {
+    font-size: 20px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    font-weight: 100;
+
+}
