@@ -1,8 +1,8 @@
-# 🌺 LipadCebu
+# 🏝️ LipadCebu
 
 A beautiful, responsive travel and tourism website for **Cebu, Philippines** — showcasing the island's best destinations, food, culture, and heritage, with an integrated booking system for your Cebu adventure.
 
-[![LipadCebu Homepage](https://raw.githubusercontent.com/15-hrs/LipadCebu/master/wwwroot/HomepageHero.jpg)](https://github.com/15-hrs/LipadCebu)
+![LipadCebu Homepage](https://raw.githubusercontent.com/15-hrs/LipadCebu/master/wwwroot/HomepageHero.jpg)
 
 ---
 
