@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lipadcebu2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a542374e5634f29860f6805f679102da7db340c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("lipadcebu2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lipadcebu2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

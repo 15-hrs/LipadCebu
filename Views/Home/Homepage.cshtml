@@ -1,22 +1,8 @@
 @{
-    ViewData["Title"] = "Home - Lipad Cebu";
+    ViewData["Title"] = "Discover Cebu | Lipad Cebu";
 }
 
-<link rel="stylesheet" href="~/css/HomepageStyle.css">
+<link rel="stylesheet" href="~/css/HomepageStyle.css" asp-append-version="true">
 
-<div class="navbar">
-    <div class="navidiv">
-        <div class="logo">✈️ Lipad Cebu</div>
-    </div>
-</div>
-
-<div class="center-text">
-    <div class="quote">Welcome to Lipad Cebu</div>
-    <div class="sub-quote">Discover Paradise in the Philippines</div>
-</div>
-
-<div class="center-btn">
-    <a href="/Home/Choices" style="text-decoration: none;">
-        <button class="book-btn">Start Booking</button>
-    </a>
-</div>
+<div id="react-root"></div>
+<script type="module" src="~/dist/app.js" asp-append-version="true"></script>

@@ -8,9 +8,10 @@
 /* ===== BODY ===== */
 body {
     font-family: Arial, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     position: relative;
-    background-image: url(../images/ChoicesBackground.jpg);
+    background-image: url(../source-photos/Backgrounds/ChoicesBackground.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +20,7 @@ body {
 
 /* ===== NAVBAR ===== */
 .navbar {
-    background: #44ACFF;
+    background: #218C87;
     padding: 15px 30px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -38,69 +39,38 @@ body {
     font-family: Helvetica Neue, sans-serif: Arial;
 }
 
-/* NAV LINKS */
-ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-}
-
-ul, li, a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-ul, li, a:hover {
-    color: white;
-}
-
-/* SEARCH BAR */
-.search-container {
-    position: relative;
-}
-
-.search-container input {
-    padding: 8px 35px 8px 15px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    transition: 0.3s;
-}
-
-.search-container input:focus {
-    width: 250px;
-}
-
-.search-container i {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 /* ===== MAIN ===== */
 main {
-    padding: 40px;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 40px 32px;
 }
 
 /* ===== CARDS ===== */
 .container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    height: 370px;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.28);
     cursor: pointer;
+    isolation: isolate;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
 
 /* IMAGE */
@@ -108,6 +78,12 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img,
+.card:focus-within img {
+    transform: scale(1.05);
 }
 
 /* OVERLAY TEXT */
@@ -115,32 +91,43 @@ main {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 80px;
-    padding: 10px;
-    background: rgba(0,0,0,0.5);
+    padding: 64px 18px 18px;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.82) 35%);
     color: white;
-    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
 }
 
-/* TITLE */
 .intro h2 {
     font-size: 20px;
+    line-height: 1.2;
 }
 
-/* DESCRIPTION */
 .intro p {
     font-size: 14px;
-    opacity: 0;
-    transition: 0.4s;
+    line-height: 1.45;
 }
 
-/* HOVER EFFECT */
-.card:hover .intro {
-    height: 160px;
+.intro .book {
+    padding: 9px 14px;
+    font-size: 14px;
 }
 
-.card:hover .intro p {
-    opacity: 1;
+@media (max-width: 600px) {
+    main {
+        padding: 28px 18px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        height: 340px;
+    }
 }
 .book{
     display: inline-block;
@@ -163,4 +150,80 @@ main {
 
 .book:active {
     transform: scale(0.96);
+}
+
+/* Shared Lipad Cebu travel palette and editorial card treatment */
+body {
+    min-height: 100vh;
+    background: #f3e8d2;
+    background-image: none;
+    color: #242b2b;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.navbar {
+    padding: 18px clamp(20px, 6vw, 88px);
+    background: #123b4a;
+    box-shadow: 0 8px 28px rgba(18, 59, 74, .12);
+}
+
+.logo {
+    color: #f3e8d2;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    letter-spacing: .06em;
+}
+
+main { max-width: 1320px; padding: clamp(34px, 6vw, 76px) clamp(20px, 5vw, 64px); }
+main > h1 {
+    margin: 0 0 38px !important;
+    color: #242b2b !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 500;
+    letter-spacing: -.045em;
+}
+
+.container {
+    max-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    height: clamp(320px, 33vw, 410px);
+    border: 1px solid rgba(18, 59, 74, .12);
+    border-radius: 6px;
+    box-shadow: 0 12px 32px rgba(18, 59, 74, .12);
+}
+
+.card img { filter: saturate(.9); }
+.intro { gap: 10px; padding: 92px 22px 22px; background: linear-gradient(180deg, transparent 0%, rgba(13, 30, 30, .42) 28%, rgba(13, 30, 30, .88) 100%); }
+.intro h2 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(22px, 2.1vw, 29px); font-weight: 500; }
+.intro p { max-width: 34ch; color: rgba(255,255,255,.88); font-size: 13px; line-height: 1.65; }
+.book { margin-top: 5px; padding: 11px 15px; border: 1px solid rgba(255,255,255,.72); border-radius: 2px; color: #fff; background: #187c78; box-shadow: none; font-size: 12px; letter-spacing: .02em; }
+.book:hover { background: #123b4a; box-shadow: none; }
+main > div[style] { margin-top: 34px !important; }
+
+@media (max-width: 850px) {
+    .container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+}
+@media (max-width: 560px) {
+    .container { grid-template-columns: 1fr; }
+    .card { height: 360px; }
+}
+
+/* More even page, card, and action spacing */
+main { padding-top: clamp(42px, 6vw, 72px); padding-bottom: clamp(54px, 7vw, 84px); }
+main > h1 { margin-bottom: clamp(28px, 4vw, 42px) !important; }
+.container { gap: clamp(16px, 1.8vw, 24px); }
+.card { height: clamp(320px, 31vw, 390px); }
+.intro { gap: 9px; padding-right: clamp(18px, 2vw, 24px); padding-bottom: clamp(18px, 2vw, 24px); padding-left: clamp(18px, 2vw, 24px); }
+.intro p { margin: 0; }
+.book { margin-top: 5px; }
+main > div[style] { margin-top: 30px !important; }
+@media (max-width: 560px) {
+    main { padding: 38px 18px 54px; }
+    main > h1 { margin-bottom: 26px !important; }
+    .container { gap: 16px; }
 }

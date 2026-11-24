@@ -1,18 +1,9 @@
-//using Microsoft.EntityFrameworkCore;
-//using lipadcebu2.Data;
-
 // Create a WebApplication builder - this sets up the ASP.NET Core application
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the DI (Dependency Injection) container
 // AddControllersWithViews() enables MVC pattern with Controllers and Razor Views
 builder.Services.AddControllersWithViews();
-
-// Optional: Database configuration
-// Uncomment if you want to connect to SQL Server database
-//builder.Services.AddDbContext<AppDbContext>(options =>
-//    options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=model;Trusted_Connection=True;TrustServerCertificate=True;")
-//);
 
 // Build the application - creates the WebApplication instance
 var app = builder.Build();
@@ -22,9 +13,6 @@ var app = builder.Build();
 
 // Enable serving static files (CSS, JS, images from wwwroot folder)
 app.UseStaticFiles();
-
-// Enable routing for the application
-app.UseRouting();
 
 // Environment-based configuration
 // Configure the HTTP request pipeline.

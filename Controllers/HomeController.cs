@@ -1,6 +1,4 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using lipadcebu2.Models;
 
 namespace lipadcebu2.Controllers
 {
@@ -22,4 +20,3 @@ namespace lipadcebu2.Controllers
         }
     }
 }
-

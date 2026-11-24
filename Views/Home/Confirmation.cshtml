@@ -1,6 +1,5 @@
 @model lipadcebu2.Models.Booking
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,25 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Confirmed</title>
     <style>
-
-        body{
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/BookingBackground.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-    height: 100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-            } 
-
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/source-photos/Backgrounds/BookingBackground.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
             display: flex;
             justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
             padding: 40px 20px;
         }
+
         .box {
             background-color: white;
             padding: 40px;
@@ -36,19 +29,23 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             text-align: center;
         }
+
         .checkmark {
             font-size: 60px;
             margin-bottom: 10px;
         }
+
         h1 {
-            color: #1a3c5e;
+            color: #123B4A;
             margin-bottom: 5px;
         }
+
         p.subtitle {
             color: #888;
             font-size: 14px;
             margin-bottom: 30px;
         }
+
         .detail-row {
             display: flex;
             justify-content: space-between;
@@ -57,15 +54,18 @@
             font-size: 14px;
             text-align: left;
         }
+
         .detail-label {
             color: #888;
         }
+
         .detail-value {
             font-weight: bold;
-            color: #1a3c5e;
+            color: #123B4A;
         }
+
         .total-box {
-            background-color: #eef4fb;
+            background-color: #EAF2F1;
             border-radius: 8px;
             padding: 15px 20px;
             display: flex;
@@ -73,31 +73,31 @@
             margin-top: 20px;
             font-weight: bold;
             font-size: 16px;
-            color: #1a3c5e;
+            color: #123B4A;
         }
+
         .back-btn {
             display: block;
             margin-top: 25px;
             padding: 14px;
-            background-color: #1a3c5e;
+            background-color: #218C87;
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-size: 16px;
         }
+
         .back-btn:hover {
-            background-color: #15304e;
+            background-color: #176E6A;
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <!-- Big checkmark to show success -->
         <div class="checkmark">✅</div>
         <h1>Booking Confirmed!</h1>
         <p class="subtitle">Your booking has been saved successfully.</p>
 
-        <!-- Show all the booking details -->
         <div class="detail-row">
             <span class="detail-label">Booking ID</span>
             <span class="detail-value">#@Model.Id</span>

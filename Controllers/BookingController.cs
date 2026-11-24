@@ -1,6 +1,5 @@
 using lipadcebu2.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace lipadcebu2.Controllers
 {
@@ -22,8 +21,7 @@ namespace lipadcebu2.Controllers
             string CheckInDate,
             string CheckOutDate,
             string SpecialRequests,
-            decimal TotalPrice
-        )
+            decimal TotalPrice)
         {
             var booking = new Booking
             {
@@ -47,4 +45,4 @@ namespace lipadcebu2.Controllers
             return View();
         }
     }
-} 
+}
