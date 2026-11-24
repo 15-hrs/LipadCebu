@@ -49,9 +49,7 @@ Built with **.NET 10**, **React 19**, and **Vite**, the site delivers a smooth, 
 - **Intro Overlay** — First-visit welcome dialog with featured destination previews
 
 ### 🏨 Booking System
-- **Booking Form** — Reserve rooms with guest details, room type, check-in/check-out dates, and special requests
-- **Confirmation Page** — Booking summary with ID, guest info, dates, room type, and total price in Philippine Pesos (₱)
-- **Server-side Processing** — ASP.NET Core controller handles form submission and stores booking data
+-error that i still need to fix.
 
 ### 🎨 Design & UX
 - **Responsive Layout** — Mobile-first design with breakpoints for tablets and desktops
