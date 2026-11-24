@@ -2,7 +2,8 @@
 
 A beautiful, responsive travel and tourism website for **Cebu, Philippines** — showcasing the island's best destinations, food, culture, and heritage, with an integrated booking system for your Cebu adventure.
 
-![LipadCebu Homepage](https://raw.githubusercontent.com/15-hrs/LipadCebu/master/wwwroot/HomepageHero.jpg)
+![LipadCebu Homepage](lipadCebu-SS/homePage.png)
+*Homepage featuring Cebu's stunning landscapes and island stories.*
 
 ---
 
@@ -22,9 +23,11 @@ Built with **.NET 10**, **React 19**, and **Vite**, the site delivers a smooth, 
 
 ## 🖼️ Screenshot
 
-![LipadCebu Homepage Hero](https://raw.githubusercontent.com/15-hrs/LipadCebu/master/wwwroot/HomepageHero.jpg)
 
-*Homepage featuring Cebu's stunning landscapes and island stories.*
+![LipadCebu Homepage](lipadCebu-SS/slideShow.png)
+![LipadCebu Homepage](lipadCebu-SS/overView.png)
+
+
 
 ---
 
